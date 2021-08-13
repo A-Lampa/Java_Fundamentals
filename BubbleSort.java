@@ -5,14 +5,14 @@ import java.util.Arrays;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] array = {10, 2, 10, 3, 1, 2, 5};
-        System.out.println(Arrays.toString(array)); // выводим массив в строку
+        //System.out.println(Arrays.toString(array)); // выводим массив в строку
         boolean needIteration = true;
         while (needIteration) {
             needIteration = false; //нужно, чтобы выйти из цикла после завершения сортировки
             for (int i = 1; i < array.length; i++) {
                 if (array[i] < array[i - 1]) { //в конце, когда это условие не выполняется, мы не присваиваем true и выходим из цикла
                     swap(array, i, i-1);
-                    System.out.println(Arrays.toString(array));
+                    //System.out.println(Arrays.toString(array));
                     needIteration = true; //нужно, чтобы снова войти в for после первого раунда сортировки (когда 7<7)
                 }
             }
